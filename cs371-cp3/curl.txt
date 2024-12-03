@@ -1,0 +1,19 @@
+THESES ARE THE COMMANDS I USED TO TEST:
+
+GET:
+curl http://localhost:8000/runs
+
+POST:
+curl -X POST http://localhost:8000/runs \
+-H 'Content-Type: application/json' \
+-d '{"date":"2024-11-23", "distance":10.28, "duration":"01:15:39", "avgpace":"00:07:21", "starttime":"14:20:00", "heartrate":168, "temperature":49, "humidity":62, "weather":"Windy"}'
+
+PUT:
+curl -X PUT http://localhost:8000/runs \
+-H 'Content-Type: application/json' \
+-d '{"distance":26.22, "duration":"03:15:39", "avgpace":"00:07:41", "starttime":"04:20:00", "heartrate":158, "temperature":39, "humidity":42, "weather":"Sunny", "date":"2024-11-23"}'
+
+DELETE:
+curl -X DELETE http://localhost:8000/runs \
+-H "Content-Type: application/json" \
+-d '{"date":"2024-11-23"}'
